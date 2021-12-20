@@ -1,0 +1,45 @@
+loacalhost/api/register /  registerAdmin  /  registerDriver
+{
+    method:post 
+
+    email,
+    username,
+    password,
+}
+
+
+loacalhost/api/login
+{
+    method:post 
+
+    email,password,
+}
+
+loacalhost/api/logout / logoutAdmin / logoutDriver    ?token=$token
+{
+    method:post 
+}
+
+loacalhost/api/setShipments?token=$token "For user only"
+{
+    method:post 
+
+    from_city,
+    to_city,photo,
+    price_prod,
+    price_Shipping,
+    received_date
+}
+
+
+loacalhost/api/getShipments?token=$token  "For user only"
+
+{
+    method:get 
+}
+
+
+loacalhost/api/getAllShipments?token=$token "For Driver only"
+{
+    method:get 
+}
